@@ -9,7 +9,7 @@ clean:
 generate:
 	@for i in ${HOSTFILES}; do \
 		echo "===> $${i%%.hosts}.kh"; \
-		ssh-keyscan -f "$${i}" > "$${i%%.hosts}.kh"; \
+		ssh-keyscan -f "$${i}" | sort -u > "$${i%%.hosts}.kh"; \
 	done
 
 install: combined
