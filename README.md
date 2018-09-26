@@ -7,6 +7,7 @@ A collection of `known_hosts` entries to be used in `/etc/ssh/ssh_known_hosts`.
 |------|-|-------:|
 | git_services | Common GIT hosting sites. | 3 |
 | openbsd_anoncvs | OpenBSD anoncvs servers (global) | 20 |
+| shell_hosting | Shell hosting providers | 2 |
 
 # Verifications
 
