@@ -9,8 +9,13 @@ A collection of ~known_hosts~ entries to be used in ~/etc/ssh/ssh_known_hosts~.
 | openbsd_anoncvs | OpenBSD anoncvs servers (global). |      20 | No               |
 | shell_hosting   | Unix shell providers.             |       2 | Yes              |
 
-
 ** Verifications
+
+*** Consensus
+
+To test consensus of the known hosts, run ~make generate~. This will re-fetch
+the entries for the ~*.hosts~ files. If there are no changes to the .kh files
+(according to git), you have achieved consensus.
 
 *** Tor
 
