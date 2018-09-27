@@ -1,0 +1,21 @@
+#+TITLE: ~ssh_known_hosts~
+#+AUTHOR: Aaron Bieber
+#+EMAIL:  aaron@bolddaemon.com
+
+* ~ssh_known_hosts~
+
+A collection of ~known_hosts~ entries to be used in ~/etc/ssh/ssh_known_hosts~.
+
+| Name            | Description                       | Entries | Verified via Tor |
+| git_services    | Common GIT hosting sites.         |       3 | Yes              |
+| openbsd_anoncvs | OpenBSD anoncvs servers (global). |      20 | No               |
+| shell_hosting   | Unix shell providers.             |       2 | Yes              |
+
+
+** Verifications
+
+*** Tor
+
+The make target ~generate-via-tor~ will attempt to connect to the hosts using
+~torsocks~. Running ~make generate-via-tor~ ideally will produce .kh files
+with no difference to what is in the git repository currently.
