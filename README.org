@@ -4,10 +4,11 @@
 
 A collection of ~known_hosts~ entries to be used in ~/etc/ssh/ssh_known_hosts~.
 
-| Name            | Description                       | Entries | Verified via Tor |
-| git_services    | Common GIT hosting sites.         |       3 | Yes              |
-| openbsd_anoncvs | OpenBSD anoncvs servers (global). |      20 | No               |
-| shell_hosting   | Unix shell providers.             |       2 | Yes              |
+
+| Name            | Description                       | Verified Via | Entries |
+| git_services    | Common GIT hosting sites.         | Tor          |       3 |
+| openbsd_anoncvs | OpenBSD anoncvs servers (global). | [[https://www.openbsd.org/anoncvs.html][OpenBSD Site]] |      20 |
+| shell_hosting   | Unix shell providers.             | Tor          |       2 |
 
 ** Verifications
 
