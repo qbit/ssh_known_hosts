@@ -1,0 +1,25 @@
+#!/usr/bin/env perl
+
+use strict;
+use warnings;
+
+use Data::Dumper;
+use Text::Template;
+
+my $hosts = {};
+my $template = Text::Template->new(SOURCE => 'default.nix.tmpl')
+  or die "Can't load template: $Text::Template::ERROR";
+
+while(<>) {
+	chomp;
+	my @parts = split(/\s/, $_);
+	$hosts->{$parts[0]} = [] unless $hosts->{$parts[0]};
+
+	push @{$hosts->{$parts[0]}}, "$parts[1] $parts[2]";
+}
+
+my $result = $template->fill_in(HASH => {
+		host_list => \$hosts,
+	});
+
+print $result if (defined $result);

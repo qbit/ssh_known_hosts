@@ -1,0 +1,10 @@
+\{ config, ... \}:
+
+\{
+{
+  foreach my $host (keys %{$host_list}) {
+    my $keys = join("\n", @{$host_list->{$host}});
+    $OUT .= qq{ programs.ssh.knownHosts."${host}".publicKey = ''$keys''; }. "\n";
+  }
+}
+\}
